@@ -15,6 +15,6 @@ Automatically retrains ML models when data or code changes
 - `dvc.yaml` defines the stages (train + evaluate)
 - Metrics are logged in `metrics.txt`
 
-## ▶Run locally
+## Run locally
 
 dvc repro
