@@ -1,0 +1,17 @@
+stages:
+  train:
+    cmd: python ml/train.py
+    deps:
+      - ml/train.py
+      - data/dataset.csv
+    outs:
+      - ml/model.pkl
+
+  evaluate:
+    cmd: python ml/evaluate.py
+    deps:
+      - ml/evaluate.py
+      - ml/model.pkl
+      - data/dataset.csv
+    metrics:
+      - metrics.txt
